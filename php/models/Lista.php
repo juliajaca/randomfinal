@@ -13,7 +13,7 @@ class Lista {
     'Toni',
     'Jordi',
     'David',
-    'Luis el carapolla',
+    'Luis',
     'Alexis',
     'Petro',
     'Alejandro',
@@ -22,12 +22,11 @@ class Lista {
 ];
 
 //Pintar lista de gente
-public function drawRandomList($arr)
-{   
+public function drawRandomList($arr) {   
     shuffle($arr);
 
-    foreach($arr as $value){
-    echo '<li> '  .$value .'</li>';
+        foreach($arr as $value){
+            echo '<li> '  . $value .'</li>';
+        }
     }
-}
 }

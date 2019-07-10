@@ -1,10 +1,11 @@
 <!-- PHP 7-->
 <?php 
-require_once 'php/models/Lista.php';
-$lista = new Lista;
+    require_once 'php/models/Lista.php';
+        $lista = new Lista;
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@ $lista = new Lista;
 <!-- HEADER -->
 
     <header class="container">
-    <h1>El randomizer 3000</h1>
+        <h1>El randomizer 3000.1</h1>
     </header>
 
 
