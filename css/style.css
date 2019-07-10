@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+header {
+  height: 240px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.container {
+  width: 700px;
+  margin: auto;
+}
+.lists {
+  display: flex;
+}
+.lists ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.lists ul li {
+  flex-basis: 300px;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}

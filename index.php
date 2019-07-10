@@ -1,6 +1,7 @@
 <!-- PHP 7-->
 <?php 
-
+require_once 'php/models/Lista.php';
+$lista = new Lista;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Randomizer</title>
 
     <!-- LINKS EXTERNOS -->
     <link rel="stylesheet" href="css/reset.css">
@@ -20,23 +21,22 @@
     
 <!-- HEADER -->
 
-    <header>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+    <header class="container">
+    <h1>El randomizer 3000</h1>
     </header>
 
-<!-- SECTION -->
 
-    <section>
-        <article></article>
-    </section>
 
-<!-- FOOTER -->
-
-    <footer></footer>
+<!-- Main -->
+<main>
+<div class="container lists">
+            <ul>
+                <?php 
+                    $lista->drawRandomList($lista->arrayGente);
+                ?>
+            </ul>
+    </div>
+</main>
 
 </body>
 </html>
