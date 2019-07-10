@@ -1,6 +1,16 @@
 <?php
 
 class Lista {
+
+
+
+    public $conexion;
+ 
+    public function __construct($servidor, $usuario, $password, $bd){
+        $this->conexion = new \mysqli($servidor, $usuario, $password, $bd);
+    }
+
+    
     //Props
     public $arrayGente = 
     ['Lolo',

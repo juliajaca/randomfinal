@@ -1,7 +1,10 @@
 <!-- PHP 7-->
 <?php 
-    require_once 'php/models/Lista.php';
-        $lista = new Lista;
+    require_once 'php/models/Lista.php';       
+
+$lista= new Lista('localhost' , 'root', '', 'random');
+
+
 ?>
 
 <!DOCTYPE html>

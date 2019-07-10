@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-07-2019 a las 11:49:43
+-- Tiempo de generación: 10-07-2019 a las 13:25:01
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.4
 
@@ -21,95 +21,61 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `random`
 --
+CREATE DATABASE IF NOT EXISTS `random` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+USE `random`;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `novi@1`
+-- Estructura de tabla para la tabla `persona`
 --
 
-CREATE TABLE `novi@1` (
-  `id_novi@1` int(11) NOT NULL,
+CREATE TABLE `persona` (
+  `id_persona` int(11) NOT NULL,
   `nombre` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `novi@2`
+-- Volcado de datos para la tabla `persona`
 --
 
-CREATE TABLE `novi@2` (
-  `id_novi@2` int(11) NOT NULL,
-  `nombre` varchar(45) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `parejas`
---
-
-CREATE TABLE `parejas` (
-  `id_parejas` int(11) NOT NULL,
-  `id_novi@1` int(11) DEFAULT NULL,
-  `id_novio@2` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+INSERT INTO `persona` (`id_persona`, `nombre`) VALUES
+(1, 'Jorge'),
+(2, 'Julia'),
+(3, 'Jose'),
+(4, 'Mateo'),
+(5, 'Jaume'),
+(6, 'Petro'),
+(7, 'Alejandro'),
+(8, 'Fran'),
+(9, 'Adrian'),
+(10, 'Lolo'),
+(11, 'Christian'),
+(12, 'Jordi'),
+(13, 'Luis'),
+(14, 'Alexis'),
+(15, 'David'),
+(16, 'Toni');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `novi@1`
+-- Indices de la tabla `persona`
 --
-ALTER TABLE `novi@1`
-  ADD PRIMARY KEY (`id_novi@1`);
-
---
--- Indices de la tabla `novi@2`
---
-ALTER TABLE `novi@2`
-  ADD PRIMARY KEY (`id_novi@2`);
-
---
--- Indices de la tabla `parejas`
---
-ALTER TABLE `parejas`
-  ADD PRIMARY KEY (`id_parejas`);
+ALTER TABLE `persona`
+  ADD PRIMARY KEY (`id_persona`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `novi@1`
+-- AUTO_INCREMENT de la tabla `persona`
 --
-ALTER TABLE `novi@1`
-  MODIFY `id_novi@1` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `novi@2`
---
-ALTER TABLE `novi@2`
-  MODIFY `id_novi@2` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `parejas`
---
-ALTER TABLE `parejas`
-  MODIFY `id_parejas` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `parejas`
---
-ALTER TABLE `parejas`
-  ADD CONSTRAINT `id_novi@1` FOREIGN KEY (`id_parejas`) REFERENCES `novi@1` (`id_novi@1`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `id_novi@2` FOREIGN KEY (`id_parejas`) REFERENCES `novi@2` (`id_novi@2`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `persona`
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
